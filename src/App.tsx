@@ -8,15 +8,10 @@ import {
   Box,
   ThemeProvider,
   createTheme,
-  CssBaseline
+  CssBaseline,
+  Chip
 } from '@mui/material';
-
-// Voorbeeld data - in een echte app zou dit van een API komen
-const riders = [
-  { number: 1, name: "Tadej Pogačar", team: "UAE Team Emirates", nationality: "Slovenië" },
-  { number: 2, name: "Primož Roglič", team: "Bora-Hansgrohe", nationality: "Slovenië" },
-  { number: 3, name: "Jonas Vingegaard", team: "Visma-Lease a Bike", nationality: "Denemarken" },
-];
+import { riders } from './data/riders';
 
 const theme = createTheme({
   palette: {
@@ -57,14 +52,20 @@ function App() {
               <Typography variant="h5" component="div" gutterBottom>
                 {rider.name}
               </Typography>
-              <Typography color="text.secondary" gutterBottom>
-                Rugnummer: {rider.number}
-              </Typography>
+              <Box sx={{ mb: 2 }}>
+                <Chip 
+                  label={`Rugnummer: ${rider.number}`} 
+                  color="primary" 
+                  sx={{ mr: 1, mb: 1 }} 
+                />
+                <Chip 
+                  label={rider.nationality} 
+                  variant="outlined" 
+                  sx={{ mr: 1, mb: 1 }} 
+                />
+              </Box>
               <Typography color="text.secondary" gutterBottom>
                 Ploeg: {rider.team}
-              </Typography>
-              <Typography color="text.secondary">
-                Nationaliteit: {rider.nationality}
               </Typography>
             </CardContent>
           </Card>
