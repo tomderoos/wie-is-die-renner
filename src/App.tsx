@@ -13,6 +13,7 @@ import {
   Link
 } from '@mui/material';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import { riders } from './data/riders';
 
 const theme = createTheme({
@@ -112,6 +113,13 @@ function App() {
               },
               '& .MuiInputBase-input': {
                 color: 'black',
+                '&::-webkit-outer-spin-button, &::-webkit-inner-spin-button': {
+                  '-webkit-appearance': 'none',
+                  margin: 0
+                },
+                '&[type=number]': {
+                  '-moz-appearance': 'textfield'
+                }
               },
             }}
           />
@@ -162,6 +170,34 @@ function App() {
             </CardContent>
           </Card>
         )}
+
+        <Box 
+          component="footer" 
+          sx={{ 
+            mt: 4, 
+            textAlign: 'center',
+            color: 'text.secondary',
+            fontSize: '0.9rem'
+          }}
+        >
+          <Typography>
+            Made with <FavoriteIcon sx={{ fontSize: '1rem', verticalAlign: 'middle', color: 'black' }} /> by{' '}
+            <Link 
+              href="http://www.tomderoos.nl" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              sx={{ 
+                color: 'inherit',
+                textDecoration: 'none',
+                '&:hover': {
+                  textDecoration: 'underline'
+                }
+              }}
+            >
+              Tom de Roos
+            </Link>
+          </Typography>
+        </Box>
       </Container>
     </ThemeProvider>
   );
