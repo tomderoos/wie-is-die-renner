@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { 
   Container, 
   TextField, 
@@ -10,13 +10,7 @@ import {
   createTheme,
   CssBaseline,
   Chip,
-  Link,
-  List,
-  ListItem,
-  ListItemText,
-  IconButton,
-  Tooltip,
-  CircularProgress
+  Link
 } from '@mui/material';
 import { OpenInNew as OpenInNewIcon, Favorite as FavoriteIcon } from '@mui/icons-material';
 import { riders } from './data/riders';
