@@ -39,7 +39,7 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           '& .MuiInputBase-input': {
-            fontSize: '8rem',
+            fontSize: '20rem',
             fontFamily: '"Bebas Neue", sans-serif',
             letterSpacing: '0.1em',
             textAlign: 'center',
@@ -90,8 +90,7 @@ function App() {
           </Typography>
           <TextField
             fullWidth
-            label="Voer rugnummer in"
-            variant="outlined"
+            variant="standard"
             type="number"
             value={number}
             onChange={handleNumberChange}
@@ -103,17 +102,11 @@ function App() {
             }}
             sx={{ 
               mb: 3,
-              '& .MuiOutlinedInput-root': {
+              '& .MuiInputBase-root': {
                 backgroundColor: 'white',
-                '& fieldset': {
-                  borderWidth: 2,
-                },
-                '&:hover fieldset': {
-                  borderWidth: 2,
-                },
-                '&.Mui-focused fieldset': {
-                  borderWidth: 2,
-                },
+                '&:before, &:after': {
+                  display: 'none'
+                }
               },
               '& .MuiInputBase-input': {
                 color: 'black',
