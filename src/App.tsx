@@ -111,7 +111,7 @@ const getFlagComponent = (country: string) => {
   };
 
   const FlagComponent = flagMap[country];
-  return FlagComponent ? <FlagComponent style={{ width: '24px', marginRight: '8px' }} /> : null;
+  return FlagComponent ? <FlagComponent style={{ width: '24px', height: '24px' }} /> : <Box sx={{ width: '24px', height: '24px' }} />;
 };
 
 function App() {
@@ -180,11 +180,10 @@ function App() {
                   color="primary" 
                   sx={{ mr: 1, mb: 1 }} 
                 />
-                <Chip 
-                  label={rider.nationality} 
-                  variant="outlined" 
-                  sx={{ mr: 1, mb: 1 }} 
-                />
+                <Box sx={{ display: 'inline-flex', alignItems: 'center', mr: 1, mb: 1 }}>
+                  {getFlagComponent(rider.country)}
+                  <Typography sx={{ ml: 1 }}>{rider.country}</Typography>
+                </Box>
               </Box>
               <Typography color="text.secondary" gutterBottom>
                 Ploeg: {rider.team}
