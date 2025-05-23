@@ -156,6 +156,13 @@ function App() {
               },
               '& .MuiInputBase-input': {
                 color: 'black',
+                fontSize: { xs: '3rem', sm: '4rem', md: '10rem' },
+                fontFamily: '"Bebas Neue", sans-serif',
+                letterSpacing: '0.1em',
+                textAlign: 'center',
+                padding: '1rem',
+                height: '1.2em',
+                lineHeight: '1',
                 '&::-webkit-outer-spin-button, &::-webkit-inner-spin-button': {
                   '-webkit-appearance': 'none',
                   margin: 0
