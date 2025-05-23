@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { 
   Container, 
   TextField, 
@@ -10,11 +10,17 @@ import {
   createTheme,
   CssBaseline,
   Chip,
-  Link
+  Link,
+  List,
+  ListItem,
+  ListItemText,
+  IconButton,
+  Tooltip,
+  CircularProgress
 } from '@mui/material';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import { OpenInNew as OpenInNewIcon, Favorite as FavoriteIcon } from '@mui/icons-material';
 import { riders } from './data/riders';
+import { GB, NL, BE, FR, DE, ES, IT, DK, NO, SE, CH, AT, PL, CZ, SK, SI, HR, RS, UA, KZ, AQ, AU, NZ, US, CA, CO, EC, VE, ZA } from 'country-flag-icons/react/3x2';
 
 const theme = createTheme({
   palette: {
@@ -70,6 +76,43 @@ const theme = createTheme({
     },
   },
 });
+
+const getFlagComponent = (country: string) => {
+  const flagMap: { [key: string]: any } = {
+    'GBR': GB,
+    'NED': NL,
+    'BEL': BE,
+    'FRA': FR,
+    'GER': DE,
+    'ESP': ES,
+    'ITA': IT,
+    'DEN': DK,
+    'NOR': NO,
+    'SWE': SE,
+    'SUI': CH,
+    'AUT': AT,
+    'POL': PL,
+    'CZE': CZ,
+    'SVK': SK,
+    'SLO': SI,
+    'CRO': HR,
+    'SRB': RS,
+    'UKR': UA,
+    'KAZ': KZ,
+    'ARG': AQ,
+    'AUS': AU,
+    'NZL': NZ,
+    'USA': US,
+    'CAN': CA,
+    'COL': CO,
+    'ECU': EC,
+    'VEN': VE,
+    'RSA': ZA
+  };
+
+  const FlagComponent = flagMap[country];
+  return FlagComponent ? <FlagComponent style={{ width: '24px', marginRight: '8px' }} /> : null;
+};
 
 function App() {
   const [number, setNumber] = useState('');
