@@ -19,6 +19,9 @@ const theme = createTheme({
     primary: {
       main: '#e10600', // Giro roze
     },
+    background: {
+      default: '#fec7d7', // Nieuwe achtergrondkleur
+    },
   },
   typography: {
     fontFamily: '"Bebas Neue", sans-serif',
@@ -101,6 +104,7 @@ function App() {
             sx={{ 
               mb: 3,
               '& .MuiOutlinedInput-root': {
+                backgroundColor: 'white',
                 '& fieldset': {
                   borderWidth: 2,
                 },
@@ -110,6 +114,9 @@ function App() {
                 '&.Mui-focused fieldset': {
                   borderWidth: 2,
                 },
+              },
+              '& .MuiInputBase-input': {
+                color: 'black',
               },
             }}
           />
