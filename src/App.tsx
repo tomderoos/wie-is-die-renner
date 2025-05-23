@@ -20,6 +20,49 @@ const theme = createTheme({
       main: '#e10600', // Giro roze
     },
   },
+  typography: {
+    fontFamily: '"Bebas Neue", sans-serif',
+    h4: {
+      fontSize: '2.5rem',
+      letterSpacing: '0.05em',
+    },
+    h5: {
+      fontSize: '1.8rem',
+      letterSpacing: '0.05em',
+    },
+  },
+  components: {
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          '& .MuiInputBase-input': {
+            fontSize: '8rem',
+            fontFamily: '"Bebas Neue", sans-serif',
+            letterSpacing: '0.1em',
+            textAlign: 'center',
+            padding: '1rem',
+            height: '1.2em',
+            lineHeight: '1',
+          },
+          '& .MuiInputLabel-root': {
+            fontSize: '1.2rem',
+            fontFamily: '"Bebas Neue", sans-serif',
+            letterSpacing: '0.05em',
+          },
+        },
+      },
+    },
+    MuiChip: {
+      styleOverrides: {
+        root: {
+          fontSize: '1rem',
+          fontFamily: '"Bebas Neue", sans-serif',
+          letterSpacing: '0.05em',
+          height: '2rem',
+        },
+      },
+    },
+  },
 });
 
 function App() {
@@ -52,9 +95,23 @@ function App() {
             inputProps={{ 
               inputMode: 'numeric', 
               pattern: '[0-9]*',
-              maxLength: 3
+              maxLength: 3,
+              style: { textAlign: 'center' }
             }}
-            sx={{ mb: 3 }}
+            sx={{ 
+              mb: 3,
+              '& .MuiOutlinedInput-root': {
+                '& fieldset': {
+                  borderWidth: 2,
+                },
+                '&:hover fieldset': {
+                  borderWidth: 2,
+                },
+                '&.Mui-focused fieldset': {
+                  borderWidth: 2,
+                },
+              },
+            }}
           />
         </Box>
 
