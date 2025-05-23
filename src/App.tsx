@@ -9,8 +9,10 @@ import {
   ThemeProvider,
   createTheme,
   CssBaseline,
-  Chip
+  Chip,
+  Link
 } from '@mui/material';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { riders } from './data/riders';
 
 const theme = createTheme({
@@ -136,6 +138,27 @@ function App() {
               <Typography color="text.secondary" gutterBottom>
                 Ploeg: {rider.team}
               </Typography>
+              {rider.pcsUrl && (
+                <Link 
+                  href={rider.pcsUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  sx={{ 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    gap: 0.5,
+                    mt: 2,
+                    color: 'primary.main',
+                    textDecoration: 'none',
+                    '&:hover': {
+                      textDecoration: 'underline'
+                    }
+                  }}
+                >
+                  Bekijk renner op Procyclingstats
+                  <OpenInNewIcon fontSize="small" />
+                </Link>
+              )}
             </CardContent>
           </Card>
         )}
