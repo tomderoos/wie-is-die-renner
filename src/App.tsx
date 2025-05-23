@@ -26,6 +26,14 @@ function App() {
   const [number, setNumber] = useState('');
   const rider = riders.find(r => r.number === parseInt(number));
 
+  const handleNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    // Alleen toestaan als het leeg is of maximaal 3 cijfers bevat
+    if (value === '' || /^\d{1,3}$/.test(value)) {
+      setNumber(value);
+    }
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -40,8 +48,12 @@ function App() {
             variant="outlined"
             type="number"
             value={number}
-            onChange={(e) => setNumber(e.target.value)}
-            inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
+            onChange={handleNumberChange}
+            inputProps={{ 
+              inputMode: 'numeric', 
+              pattern: '[0-9]*',
+              maxLength: 3
+            }}
             sx={{ mb: 3 }}
           />
         </Box>
