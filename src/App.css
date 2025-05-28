@@ -1,0 +1,14 @@
+* {
+  font-family: 'Rubik', sans-serif !important;
+}
+
+/* Specifieke uitzondering voor de nummer input */
+input[type="number"] {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* Verbeterde leesbaarheid voor de tekst */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} 

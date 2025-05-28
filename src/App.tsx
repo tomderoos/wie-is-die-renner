@@ -10,11 +10,18 @@ import {
   createTheme,
   CssBaseline,
   Chip,
-  Link
+  Link,
+  Button,
+  List,
+  ListItem,
+  ListItemText,
+  Paper,
+  CircularProgress
 } from '@mui/material';
-import { OpenInNew as OpenInNewIcon, Favorite as FavoriteIcon } from '@mui/icons-material';
+import { OpenInNew as OpenInNewIcon, Favorite as FavoriteIcon, Search as SearchIcon } from '@mui/icons-material';
 import { riders } from './data/riders';
 import { GB, NL, BE, FR, DE, ES, IT, DK, NO, SE, CH, AT, PL, CZ, SK, SI, HR, RS, UA, KZ, AQ, AU, NZ, US, CA, CO, EC, VE, ZA } from 'country-flag-icons/react/3x2';
+import './App.css';
 
 const theme = createTheme({
   palette: {
