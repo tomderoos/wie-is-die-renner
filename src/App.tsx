@@ -126,8 +126,19 @@ function App() {
       <CssBaseline />
       <Container maxWidth="sm" sx={{ py: 4 }}>
         <Box sx={{ textAlign: 'center', mb: 4 }}>
-          <Typography variant="h4" component="h1" gutterBottom>
-            Giro d'Italia Rugnummerzoeker
+          <Typography 
+            variant="h1" 
+            component="h1" 
+            sx={{ 
+              fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
+              fontWeight: 700,
+              mb: 2 
+            }}
+          >
+            Rugnummer Zoeker
+          </Typography>
+          <Typography variant="h5" color="text.secondary" sx={{ mb: 4 }}>
+            Vind de renner bij een rugnummer
           </Typography>
           <TextField
             fullWidth
