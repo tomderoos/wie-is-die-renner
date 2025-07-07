@@ -132,13 +132,13 @@ function App() {
             sx={{ 
               fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
               fontWeight: 700,
-              mb: 2 
+              mb: 1 
             }}
           >
-            Tour de France 2025 Rugnummerzoeker
+            Wie is die renner?
           </Typography>
-          <Typography variant="h5" color="text.secondary" sx={{ mb: 4 }}>
-            Vind de renner bij een rugnummer
+          <Typography variant="subtitle1" color="text.secondary" sx={{ mb: 3 }}>
+            Tour de France 2025
           </Typography>
           <TextField
             fullWidth
