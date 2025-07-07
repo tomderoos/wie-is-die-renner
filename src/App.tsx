@@ -24,7 +24,7 @@ const theme = createTheme({
       main: '#e10600', // Giro roze
     },
     background: {
-      default: '#fec7d7', // Nieuwe achtergrondkleur
+      default: '#FFF200', // Tour de France geel
     },
   },
   typography: {
