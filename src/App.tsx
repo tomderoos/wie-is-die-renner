@@ -135,7 +135,7 @@ function App() {
               mb: 2 
             }}
           >
-            Giro d'Italia Rugnummerzoeker
+            Tour de France 2025 Rugnummerzoeker
           </Typography>
           <Typography variant="h5" color="text.secondary" sx={{ mb: 4 }}>
             Vind de renner bij een rugnummer
