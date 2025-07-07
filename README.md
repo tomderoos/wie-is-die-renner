@@ -1,4 +1,4 @@
-# Giro d'Italia Rugnummerzoeker
+# Wie is die renner?
 
 Een mobiel-vriendelijke webapp om snel rugnummers van wielrenners in de Giro d'Italia op te zoeken.
 
