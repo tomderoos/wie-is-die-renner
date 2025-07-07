@@ -95,6 +95,76 @@ export const riders: Rider[] = [
   { number: 77, name: "PENHOËT Paul", team: "Groupama - FDJ", pcsUrl: "https://www.procyclingstats.com/rider/paul-penhoet", country: "FRA" },
   { number: 78, name: "RUSSO Clément", team: "Groupama - FDJ", pcsUrl: "https://www.procyclingstats.com/rider/clement-russo", country: "FRA" },
 
+   // Lidl - Trek (WT)
+   { number: 81, name: "MILAN Jonathan", team: "Lidl - Trek", pcsUrl: "https://www.procyclingstats.com/rider/jonathan-milan", country: "ITA" },
+   { number: 82, name: "CONSONNI Simone", team: "Lidl - Trek", pcsUrl: "https://www.procyclingstats.com/rider/simone-consonni", country: "ITA" },
+   { number: 83, name: "NYS Thibau", team: "Lidl - Trek", pcsUrl: "https://www.procyclingstats.com/rider/thibau-nys", country: "BEL" },
+   { number: 84, name: "SIMMONS Quinn", team: "Lidl - Trek", pcsUrl: "https://www.procyclingstats.com/rider/quinn-simmons", country: "USA" },
+   { number: 85, name: "SKJELMOSE Mattias", team: "Lidl - Trek", pcsUrl: "https://www.procyclingstats.com/rider/mattias-skjelmose-jensen", country: "DEN" },
+   { number: 86, name: "SKUJIŅŠ Toms", team: "Lidl - Trek", pcsUrl: "https://www.procyclingstats.com/rider/toms-skujins", country: "LAT" },
+   { number: 87, name: "STUYVEN Jasper", team: "Lidl - Trek", pcsUrl: "https://www.procyclingstats.com/rider/jasper-stuyven", country: "BEL" },
+   { number: 88, name: "THEUNS Edward", team: "Lidl - Trek", pcsUrl: "https://www.procyclingstats.com/rider/edward-theuns", country: "BEL" },
+ 
+   // Groupama - FDJ (WT)
+   { number: 91, name: "MARTIN Guillaume", team: "Groupama - FDJ", pcsUrl: "https://www.procyclingstats.com/rider/guillaume-martin", country: "FRA" },
+   { number: 92, name: "ASKEY Lewis", team: "Groupama - FDJ", pcsUrl: "https://www.procyclingstats.com/rider/lewis-askey", country: "GBR" },
+   { number: 93, name: "BARTHE Cyril", team: "Groupama - FDJ", pcsUrl: "https://www.procyclingstats.com/rider/cyril-barthe", country: "FRA" },
+   { number: 94, name: "GRÉGOIRE Romain", team: "Groupama - FDJ", pcsUrl: "https://www.procyclingstats.com/rider/romain-gregoire1", country: "FRA" },
+   { number: 95, name: "MADOUAS Valentin", team: "Groupama - FDJ", pcsUrl: "https://www.procyclingstats.com/rider/valentin-madouas", country: "FRA" },
+   { number: 96, name: "PACHER Quentin", team: "Groupama - FDJ", pcsUrl: "https://www.procyclingstats.com/rider/quentin-pacher", country: "FRA" },
+   { number: 97, name: "PENHOËT Paul", team: "Groupama - FDJ", pcsUrl: "https://www.procyclingstats.com/rider/paul-penhoet", country: "FRA" },
+   { number: 98, name: "RUSSO Clément", team: "Groupama - FDJ", pcsUrl: "https://www.procyclingstats.com/rider/clement-russo", country: "FRA" },
+ 
+   // Alpecin - Deceuninck (WT)
+   { number: 101, name: "PHILIPSEN Jasper", team: "Alpecin - Deceuninck", pcsUrl: "https://www.procyclingstats.com/rider/jasper-philipsen", country: "BEL" },
+   { number: 102, name: "DILLIER Silvan", team: "Alpecin - Deceuninck", pcsUrl: "https://www.procyclingstats.com/rider/silvan-dillier", country: "SUI" },
+   { number: 103, name: "GROVES Kaden", team: "Alpecin - Deceuninck", pcsUrl: "https://www.procyclingstats.com/rider/kaden-groves", country: "AUS" },
+   { number: 104, name: "MEURISSE Xandro", team: "Alpecin - Deceuninck", pcsUrl: "https://www.procyclingstats.com/rider/xandro-meurisse", country: "BEL" },
+   { number: 105, name: "RICKAERT Jonas", team: "Alpecin - Deceuninck", pcsUrl: "https://www.procyclingstats.com/rider/jonas-rickaert", country: "BEL" },
+   { number: 106, name: "VAN DER POEL Mathieu", team: "Alpecin - Deceuninck", pcsUrl: "https://www.procyclingstats.com/rider/mathieu-van-der-poel", country: "NED" },
+   { number: 107, name: "VERMEERSCH Gianni", team: "Alpecin - Deceuninck", pcsUrl: "https://www.procyclingstats.com/rider/gianni-vermeersch", country: "BEL" },
+   { number: 108, name: "VERSTRYNGE Emiel", team: "Alpecin - Deceuninck", pcsUrl: "https://www.procyclingstats.com/rider/emiel-verstrynge", country: "BEL" },
+ 
+   // Tudor Pro Cycling Team (PRT)
+   { number: 111, name: "ALAPHILIPPE Julian", team: "Tudor Pro Cycling Team", pcsUrl: "https://www.procyclingstats.com/rider/julian-alaphilippe", country: "FRA" },
+   { number: 112, name: "DAINESE Alberto", team: "Tudor Pro Cycling Team", pcsUrl: "https://www.procyclingstats.com/rider/alberto-dainese", country: "ITA" },
+   { number: 113, name: "HALLER Marco", team: "Tudor Pro Cycling Team", pcsUrl: "https://www.procyclingstats.com/rider/marco-haller", country: "AUT" },
+   { number: 114, name: "HIRSCHI Marc", team: "Tudor Pro Cycling Team", pcsUrl: "https://www.procyclingstats.com/rider/marc-hirschi", country: "SUI" },
+   { number: 115, name: "LIENHARD Fabian", team: "Tudor Pro Cycling Team", pcsUrl: "https://www.procyclingstats.com/rider/fabian-lienhard", country: "SUI" },
+   { number: 116, name: "MAYRHOFER Marius", team: "Tudor Pro Cycling Team", pcsUrl: "https://www.procyclingstats.com/rider/marius-mayrhofer", country: "GER" },
+   { number: 117, name: "STORER Michael", team: "Tudor Pro Cycling Team", pcsUrl: "https://www.procyclingstats.com/rider/michael-storer", country: "AUS" },
+   { number: 118, name: "TRENTIN Matteo", team: "Tudor Pro Cycling Team", pcsUrl: "https://www.procyclingstats.com/rider/matteo-trentin", country: "ITA" },
+ 
+   // Team Jayco AlUla (WT)
+   { number: 121, name: "O'CONNOR Ben", team: "Team Jayco AlUla", pcsUrl: "https://www.procyclingstats.com/rider/ben-o-connor", country: "AUS" },
+   { number: 122, name: "DUNBAR Eddie", team: "Team Jayco AlUla", pcsUrl: "https://www.procyclingstats.com/rider/eddie-dunbar", country: "IRL" },
+   { number: 123, name: "DURBRIDGE Luke", team: "Team Jayco AlUla", pcsUrl: "https://www.procyclingstats.com/rider/luke-durbridge", country: "AUS" },
+   { number: 124, name: "GROENEWEGEN Dylan", team: "Team Jayco AlUla", pcsUrl: "https://www.procyclingstats.com/rider/dylan-groenewegen", country: "NED" },
+   { number: 125, name: "MEZGEC Luka", team: "Team Jayco AlUla", pcsUrl: "https://www.procyclingstats.com/rider/luka-mezgec", country: "SLO" },
+   { number: 126, name: "PLAPP Luke", team: "Team Jayco AlUla", pcsUrl: "https://www.procyclingstats.com/rider/luke-plapp", country: "AUS" },
+   { number: 127, name: "REINDERS Elmar", team: "Team Jayco AlUla", pcsUrl: "https://www.procyclingstats.com/rider/elmar-reinders", country: "NED" },
+   { number: 128, name: "SCHMID Mauro", team: "Team Jayco AlUla", pcsUrl: "https://www.procyclingstats.com/rider/mauro-schmid", country: "SUI" },
+ 
+   // Arkéa - B&B Hotels (WT)
+   { number: 131, name: "VAUQUELIN Kévin", team: "Arkéa - B&B Hotels", pcsUrl: "https://www.procyclingstats.com/rider/kevin-vauquelin", country: "FRA" },
+   { number: 132, name: "CAPIOT Amaury", team: "Arkéa - B&B Hotels", pcsUrl: "https://www.procyclingstats.com/rider/amaury-capiot", country: "BEL" },
+   { number: 133, name: "COSTIOU Ewen", team: "Arkéa - B&B Hotels", pcsUrl: "https://www.procyclingstats.com/rider/ewen-costiou", country: "FRA" },
+   { number: 134, name: "DÉMARE Arnaud", team: "Arkéa - B&B Hotels", pcsUrl: "https://www.procyclingstats.com/rider/arnaud-demare", country: "FRA" },
+   { number: 135, name: "GARCÍA PIERNA Raúl", team: "Arkéa - B&B Hotels", pcsUrl: "https://www.procyclingstats.com/rider/raul-garcia-pierna", country: "ESP" },
+   { number: 136, name: "LE BERRE Mathis", team: "Arkéa - B&B Hotels", pcsUrl: "https://www.procyclingstats.com/rider/mathis-le-berre", country: "FRA" },
+   { number: 137, name: "RODRÍGUEZ Cristián", team: "Arkéa - B&B Hotels", pcsUrl: "https://www.procyclingstats.com/rider/cristian-rodriguez", country: "ESP" },
+   { number: 138, name: "VENTURINI Clément", team: "Arkéa - B&B Hotels", pcsUrl: "https://www.procyclingstats.com/rider/clement-venturini", country: "FRA" },
+ 
+   // Movistar Team (WT)
+   { number: 141, name: "MAS Enric", team: "Movistar Team", pcsUrl: "https://www.procyclingstats.com/rider/enric-mas", country: "ESP" },
+   { number: 142, name: "BARTA Will", team: "Movistar Team", pcsUrl: "https://www.procyclingstats.com/rider/will-barta", country: "USA" },
+   { number: 143, name: "CASTRILLO Pablo", team: "Movistar Team", pcsUrl: "https://www.procyclingstats.com/rider/pablo-castrillo", country: "ESP" },
+   { number: 144, name: "OLIVEIRA Nelson", team: "Movistar Team", pcsUrl: "https://www.procyclingstats.com/rider/nelson-oliveira", country: "POR" },
+   { number: 145, name: "GARCÍA CORTINA Iván", team: "Movistar Team", pcsUrl: "https://www.procyclingstats.com/rider/ivan-garcia-cortina", country: "ESP" },
+   { number: 146, name: "MÜHLBERGER Gregor", team: "Movistar Team", pcsUrl: "https://www.procyclingstats.com/rider/gregor-muhlberger", country: "AUT" },
+   { number: 147, name: "ROMEO Iván", team: "Movistar Team", pcsUrl: "https://www.procyclingstats.com/rider/ivan-romeo", country: "ESP" },
+   { number: 148, name: "RUBIO Einer", team: "Movistar Team", pcsUrl: "https://www.procyclingstats.com/rider/einer-rubio", country: "COL" },
+
   // Decathlon AG2R La Mondiale Team (WT)
   // DS: DESSEL Cyril, JOLY Sébastien
   { number: 151, name: "GALL Felix", team: "Decathlon AG2R La Mondiale Team", pcsUrl: "https://www.procyclingstats.com/rider/felix-gall", country: "AUT" },
@@ -181,5 +251,5 @@ export const riders: Rider[] = [
   { number: 225, name: "HOELGAARD Markus", team: "Uno-X Mobility", pcsUrl: "https://www.procyclingstats.com/rider/markus-hoelgaard", country: "NOR" },
   { number: 226, name: "JOHANNESSEN Anders Halland", team: "Uno-X Mobility", pcsUrl: "https://www.procyclingstats.com/rider/anders-halland-johannessen", country: "NOR" },
   { number: 227, name: "LEKNESSUND Andreas", team: "Uno-X Mobility", pcsUrl: "https://www.procyclingstats.com/rider/andreas-leknessund", country: "NOR" },
-  { number: 228, name: "WÆRENSKJOLD Søren", team: "Uno-X Mobility", pcsUrl: "https://www.procyclingstats.com/rider/soren-waerenskjold", country: "NOR" },
-]; 
+  { number: 228, name: "WÆRENSKJOLD Søren", team: "Uno-X Mobility", pcsUrl: "https://www.procyclingstats.com/rider/soren-waerenskjold", country: "NOR" }
+].sort((a, b) => a.number - b.number); 
