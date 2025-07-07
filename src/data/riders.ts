@@ -38,7 +38,7 @@ export const riders: Rider[] = [
   { number: 25, name: "PARET-PEINTRE Valentin", team: "Soudal Quick-Step", pcsUrl: "https://www.procyclingstats.com/rider/valentin-paret-peintre", country: "FRA" },
   { number: 26, name: "SCHACHMANN Maximilian", team: "Soudal Quick-Step", pcsUrl: "https://www.procyclingstats.com/rider/maximilian-schachmann", country: "GER" },
   { number: 27, name: "VAN LERBERGHE Bert", team: "Soudal Quick-Step", pcsUrl: "https://www.procyclingstats.com/rider/bert-van-lerberghe", country: "BEL" },
-  { number: 28, name: "VAN WILDER Ilan", team: "Soudal Quick-Step", pcsUrl: "https://www.procyclingstats.com/rider/ilan-van-wilder", country: "BEL" },
+  { number: 28, name: "VAN WILDER Ilan ", team: "Soudal Quick-Step", pcsUrl: "https://www.procyclingstats.com/rider/ilan-van-wilder", country: "BEL" },
 
   // EF Education - EasyPost (WT)
   // DS: WEGELIUS Charles, KLIER Andreas
