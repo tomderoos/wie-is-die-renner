@@ -252,4 +252,4 @@ export const riders: Rider[] = [
   { number: 146, name: "MÜHLBERGER Gregor", team: "Movistar Team", pcsUrl: "https://www.procyclingstats.com/rider/gregor-muhlberger", country: "AUT" },
   { number: 147, name: "ROMEO Iván", team: "Movistar Team", pcsUrl: "https://www.procyclingstats.com/rider/ivan-romeo", country: "ESP" },
   { number: 148, name: "RUBIO Einer", team: "Movistar Team", pcsUrl: "https://www.procyclingstats.com/rider/einer-rubio", country: "COL" },
-]; 
+].sort((a, b) => a.number - b.number); 
