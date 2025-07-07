@@ -1,3 +1,4 @@
+// Trigger nieuwe build voor Github Pages
 import { useState } from 'react';
 import { 
   Container, 
@@ -137,7 +138,7 @@ function App() {
           >
             Wie is die renner?
           </Typography>
-          <Typography variant="subtitle1" color="text.secondary" sx={{ mb: 3 }}>
+          <Typography variant="subtitle1" color="text.secondary" sx={{ mb: 3, fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' }, fontWeight: 700 }}>
             Tour de France 2025
           </Typography>
           <TextField
@@ -150,7 +151,7 @@ function App() {
               inputMode: 'numeric', 
               pattern: '[0-9]*',
               maxLength: 3,
-              style: { textAlign: 'center' }
+              style: { textAlign: 'center', fontWeight: 900 }
             }}
             sx={{ 
               mb: 3,
@@ -169,6 +170,7 @@ function App() {
                 padding: '1rem',
                 height: '1.2em',
                 lineHeight: '1',
+                fontWeight: 900,
                 '&::-webkit-outer-spin-button, &::-webkit-inner-spin-button': {
                   '-webkit-appearance': 'none',
                   margin: 0
