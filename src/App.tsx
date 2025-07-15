@@ -1,5 +1,5 @@
 // Trigger nieuwe build voor Github Pages
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { 
   Container, 
   TextField, 
@@ -112,6 +112,7 @@ const getFlagComponent = (country: string) => {
 
 function App() {
   const [number, setNumber] = useState('');
+  const [openInfo, setOpenInfo] = useState(false);
   const rider = riders.find(r => r.number === parseInt(number));
 
   const handleNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -125,6 +126,33 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      {/* Navbar bovenaan */}
+      <Box sx={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100%',
+        zIndex: 1000,
+        background: 'rgba(0,0,0,0.5)',
+        color: 'white',
+        display: 'flex',
+        justifyContent: 'flex-end',
+        alignItems: 'center',
+        px: 2,
+        py: 1,
+        fontSize: '0.95rem',
+        backdropFilter: 'blur(4px)'
+      }}>
+        <Link
+          component="button"
+          onClick={() => setOpenInfo(true)}
+          sx={{ color: 'white', textDecoration: 'underline', cursor: 'pointer', fontWeight: 500 }}
+        >
+          App op je homescreen
+        </Link>
+      </Box>
+      {/* Ruimte onder navbar */}
+      <Box sx={{ height: '90px' }} />
       <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <Container maxWidth="sm" sx={{ py: 4, flex: 1 }}>
           <Box sx={{ textAlign: 'center', mb: 4 }}>
@@ -134,7 +162,8 @@ function App() {
               sx={{ 
                 fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
                 fontWeight: 700,
-                mb: 1 
+                mb: 1,
+                mt: 4
               }}
             >
               Wie is die renner?
@@ -273,6 +302,49 @@ function App() {
               background image via Unsplash
             </Link>
           </Typography>
+        </Box>
+      </Box>
+      {/* Pop-up uitleg homescreen */}
+      <Box
+        sx={{
+          display: openInfo ? 'flex' : 'none',
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: '100vh',
+          bgcolor: 'rgba(0,0,0,0.5)',
+          zIndex: 2000,
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+        onClick={() => setOpenInfo(false)}
+      >
+        <Box
+          onClick={e => e.stopPropagation()}
+          sx={{
+            bgcolor: 'white',
+            color: 'black',
+            borderRadius: 2,
+            p: 3,
+            maxWidth: 340,
+            boxShadow: 6,
+            textAlign: 'left',
+            fontSize: '1rem',
+          }}
+        >
+          <Typography variant="h6" sx={{ mb: 1, fontWeight: 700 }}>App op je homescreen</Typography>
+          <Typography variant="body2" sx={{ mb: 1 }}>
+            <b>iOS (Safari):</b> Tik op het <b>deel-icoon</b> <span role="img" aria-label="delen">⬆️</span> onderaan en kies <b>'Zet op beginscherm'</b>.
+          </Typography>
+          <Typography variant="body2" sx={{ mb: 1 }}>
+            <b>Android (Chrome):</b> Tik op het <b>menu</b> <span role="img" aria-label="menu">⋮</span> rechtsboven en kies <b>'Toevoegen aan startscherm'</b>.
+          </Typography>
+          <Box sx={{ textAlign: 'right', mt: 2 }}>
+            <Link component="button" onClick={() => setOpenInfo(false)} sx={{ color: 'primary.main', fontWeight: 500 }}>
+              Sluiten
+            </Link>
+          </Box>
         </Box>
       </Box>
     </ThemeProvider>
