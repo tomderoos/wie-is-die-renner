@@ -1,3 +1,31 @@
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, rgba(255, 242, 0, 0.8) 0%, rgba(255, 242, 0, 1) 100%), url('/assets/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.MuiContainer-root {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
 * {
   font-family: 'Rubik', sans-serif !important;
 }
@@ -7,8 +35,4 @@ input[type="number"] {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
 }
 
-/* Verbeterde leesbaarheid voor de tekst */
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-} 
+/* Verbeterde leesbaarheid voor de tekst */ 

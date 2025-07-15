@@ -125,120 +125,124 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container maxWidth="sm" sx={{ py: 4 }}>
-        <Box sx={{ textAlign: 'center', mb: 4 }}>
-          <Typography 
-            variant="h1" 
-            component="h1" 
-            sx={{ 
-              fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
-              fontWeight: 700,
-              mb: 1 
-            }}
-          >
-            Wie is die renner?
-          </Typography>
-          <Typography variant="subtitle1" color="text.secondary" sx={{ mb: 3, fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' }, fontWeight: 700 }}>
-            Tour de France 2025
-          </Typography>
-          <TextField
-            fullWidth
-            variant="standard"
-            type="number"
-            value={number}
-            onChange={handleNumberChange}
-            inputProps={{ 
-              inputMode: 'numeric', 
-              pattern: '[0-9]*',
-              maxLength: 3,
-              style: { textAlign: 'center', fontWeight: 900 }
-            }}
-            sx={{ 
-              mb: 3,
-              '& .MuiInputBase-root': {
-                backgroundColor: 'white',
-                '&:before, &:after': {
-                  display: 'none'
-                }
-              },
-              '& .MuiInputBase-input': {
-                color: 'black',
-                fontSize: { xs: '3rem', sm: '4rem', md: '10rem' },
-                fontFamily: '"Bebas Neue", sans-serif',
-                letterSpacing: '0.1em',
-                textAlign: 'center',
-                padding: '1rem',
-                height: '1.2em',
-                lineHeight: '1',
-                fontWeight: 900,
-                '&::-webkit-outer-spin-button, &::-webkit-inner-spin-button': {
-                  '-webkit-appearance': 'none',
-                  margin: 0
+      <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <Container maxWidth="sm" sx={{ py: 4, flex: 1 }}>
+          <Box sx={{ textAlign: 'center', mb: 4 }}>
+            <Typography 
+              variant="h1" 
+              component="h1" 
+              sx={{ 
+                fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' },
+                fontWeight: 700,
+                mb: 1 
+              }}
+            >
+              Wie is die renner?
+            </Typography>
+            <Typography variant="subtitle1" color="text.secondary" sx={{ mb: 3, fontSize: { xs: '1.5rem', sm: '2rem', md: '2.5rem' }, fontWeight: 700 }}>
+              Tour de France 2025
+            </Typography>
+            <TextField
+              fullWidth
+              variant="standard"
+              type="number"
+              value={number}
+              onChange={handleNumberChange}
+              inputProps={{ 
+                inputMode: 'numeric', 
+                pattern: '[0-9]*',
+                maxLength: 3,
+                style: { textAlign: 'center', fontWeight: 900 }
+              }}
+              sx={{ 
+                mb: 3,
+                '& .MuiInputBase-root': {
+                  backgroundColor: 'white',
+                  '&:before, &:after': {
+                    display: 'none'
+                  }
                 },
-                '&[type=number]': {
-                  '-moz-appearance': 'textfield'
-                }
-              },
-            }}
-          />
-        </Box>
+                '& .MuiInputBase-input': {
+                  color: 'black',
+                  fontSize: { xs: '3rem', sm: '4rem', md: '10rem' },
+                  fontFamily: '"Bebas Neue", sans-serif',
+                  letterSpacing: '0.1em',
+                  textAlign: 'center',
+                  padding: '1rem',
+                  height: '1.2em',
+                  lineHeight: '1',
+                  fontWeight: 900,
+                  '&::-webkit-outer-spin-button, &::-webkit-inner-spin-button': {
+                    '-webkit-appearance': 'none',
+                    margin: 0
+                  },
+                  '&[type=number]': {
+                    '-moz-appearance': 'textfield'
+                  }
+                },
+              }}
+            />
+          </Box>
 
-        {rider && (
-          <Card elevation={3}>
-            <CardContent>
-              <Typography variant="h5" component="div" gutterBottom>
-                {rider.name}
-              </Typography>
-              <Box sx={{ mb: 2 }}>
-                <Chip 
-                  label={`Rugnummer: ${rider.number}`} 
-                  color="primary" 
-                  sx={{ mr: 1, mb: 1 }} 
-                />
-                <Box sx={{ display: 'inline-flex', alignItems: 'center', mr: 1, mb: 1 }}>
-                  {getFlagComponent(rider.country)}
-                  <Typography sx={{ ml: 1 }}>{rider.country}</Typography>
+          {rider && (
+            <Card elevation={3}>
+              <CardContent>
+                <Typography variant="h5" component="div" gutterBottom>
+                  {rider.name}
+                </Typography>
+                <Box sx={{ mb: 2 }}>
+                  <Chip 
+                    label={`Rugnummer: ${rider.number}`} 
+                    color="primary" 
+                    sx={{ mr: 1, mb: 1 }} 
+                  />
+                  <Box sx={{ display: 'inline-flex', alignItems: 'center', mr: 1, mb: 1 }}>
+                    {getFlagComponent(rider.country)}
+                    <Typography sx={{ ml: 1 }}>{rider.country}</Typography>
+                  </Box>
                 </Box>
-              </Box>
-              <Typography color="text.secondary" gutterBottom>
-                Ploeg: {rider.team}
-              </Typography>
-              {rider.pcsUrl && (
-                <Link 
-                  href={rider.pcsUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  sx={{ 
-                    display: 'flex', 
-                    alignItems: 'center', 
-                    gap: 0.5,
-                    mt: 2,
-                    color: 'primary.main',
-                    textDecoration: 'none',
-                    '&:hover': {
-                      textDecoration: 'underline'
-                    }
-                  }}
-                >
-                  Bekijk renner op Procyclingstats
-                  <OpenInNewIcon fontSize="small" />
-                </Link>
-              )}
-            </CardContent>
-          </Card>
-        )}
-
+                <Typography color="text.secondary" gutterBottom>
+                  Ploeg: {rider.team}
+                </Typography>
+                {rider.pcsUrl && (
+                  <Link 
+                    href={rider.pcsUrl} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    sx={{ 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      gap: 0.5,
+                      mt: 2,
+                      color: 'primary.main',
+                      textDecoration: 'none',
+                      '&:hover': {
+                        textDecoration: 'underline'
+                      }
+                    }}
+                  >
+                    Bekijk renner op Procyclingstats
+                    <OpenInNewIcon fontSize="small" />
+                  </Link>
+                )}
+              </CardContent>
+            </Card>
+          )}
+        </Container>
         <Box 
           component="footer" 
           sx={{ 
             mt: 4, 
             textAlign: 'center',
-            color: 'text.secondary',
-            fontSize: '0.9rem'
+            color: 'white',
+            fontSize: '0.75rem',
+            py: 2,
+            background: 'black',
+            width: '100%'
           }}
         >
           <Typography>
-            Made with <FavoriteIcon sx={{ fontSize: '1rem', verticalAlign: 'middle', color: 'black' }} /> by{' '}
+            Made with <FavoriteIcon sx={{ fontSize: '1rem', verticalAlign: 'middle', color: 'white' }} /> by{' '}
             <Link 
               href="http://www.tomderoos.nl" 
               target="_blank" 
@@ -253,9 +257,24 @@ function App() {
             >
               Tom de Roos
             </Link>
+            {' • '}
+            <Link
+              href="https://unsplash.com/photos/group-of-people-watching-cyclist-racing-cOfR4XmEzd8"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                color: 'inherit',
+                textDecoration: 'none',
+                '&:hover': {
+                  textDecoration: 'underline'
+                }
+              }}
+            >
+              background image via Unsplash
+            </Link>
           </Typography>
         </Box>
-      </Container>
+      </Box>
     </ThemeProvider>
   );
 }
